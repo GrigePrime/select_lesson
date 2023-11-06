@@ -10,6 +10,10 @@
 			exit;
 			break;
             //改
+         //改
+        case 'lessontable':
+            break;
+            //改
 		default :
 			break;
 	}
