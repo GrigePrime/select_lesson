@@ -3,7 +3,6 @@
     $op = isset($_REQUEST['op']) ? filter_var($_REQUEST['op'],FILTER_SANITIZE_SPECIAL_CHARS) : 'home';
     
     switch ($op) {
-        //test
         // 改
 		case 'login':
 			header("location:user.php?op=login");
