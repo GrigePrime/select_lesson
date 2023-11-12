@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2023-11-12 15:34:17
+/* Smarty version 3.1.34-dev-7, created on 2023-11-12 16:06:23
   from 'D:\lesson\select_lesson\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6550f07996f384_47516707',
+  'unifunc' => 'content_6550f7ff466627_41380325',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3b6580908024172cbdf29f57b04a979dc183d4a4' => 
     array (
       0 => 'D:\\lesson\\select_lesson\\templates\\index.html',
-      1 => 1699803210,
+      1 => 1699803926,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:showaddclass.html' => 1,
   ),
 ),false)) {
-function content_6550f07996f384_47516707 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6550f7ff466627_41380325 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 
 <head>
@@ -97,12 +97,12 @@ function content_6550f07996f384_47516707 (Smarty_Internal_Template $_smarty_tpl)
 ?>
                 </div>
                 <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "addclass") {?>
-                    <?php $_smarty_tpl->_subTemplateRender('file:addclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+                <?php $_smarty_tpl->_subTemplateRender('file:addclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
                 <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "search_result") {?>
-                    <?php $_smarty_tpl->_subTemplateRender('file:addclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+                <?php $_smarty_tpl->_subTemplateRender('file:addclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
-                    <?php $_smarty_tpl->_subTemplateRender('file:showaddclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+                <?php $_smarty_tpl->_subTemplateRender('file:showaddclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
                 <?php }?>
             </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2023-11-12 13:44:47
+/* Smarty version 3.1.34-dev-7, created on 2023-11-12 16:06:23
   from 'D:\lesson\select_lesson\templates\index_side.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6550d6cf856071_85270200',
+  'unifunc' => 'content_6550f7ff503e10_82072133',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '47425a344aead9bd55e734856b11baeedc60c131' => 
     array (
       0 => 'D:\\lesson\\select_lesson\\templates\\index_side.html',
-      1 => 1699796311,
+      1 => 1699803926,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6550d6cf856071_85270200 (Smarty_Internal_Template $_smarty_tpl) {
-?><div class="panel panel-default" id='panel' >
+function content_6550f7ff503e10_82072133 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="panel panel-default" id='panel'>
     <div class="panel-heading" id="panel-heading"></div>
     <div class="panel-body" id="panel-body">
         <?php if ($_smarty_tpl->tpl_vars['isuser']->value) {?>
