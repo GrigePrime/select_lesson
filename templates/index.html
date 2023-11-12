@@ -38,13 +38,13 @@
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">查詢課程</span>
         </a>
-        <a class="home-link" href="index.php?op=home">
+        <a class="home-link" href="Addclass.php?op=addclass">
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">加選課程</span>
         </a>
 
         <div class="col-md-3 col-sm-4" id="login_frame">
-            {if $op!="login"&&$op!="registered"&&$op!="registered_insert"&&$op!="loginout"}
+            {if $op!="login"&&$op!="registered"&&$op!="loginout"}
             {include file='index_side.html'}
             {/if}
         </div>
@@ -56,6 +56,11 @@
                 <div style="max-width: 500px;margin: auto;">
                     {include file='login.html'}
                 </div>
+                {else if $op=="addclass"}
+                {include file='addclass.html'}
+                {else if $op=="search_result"}
+                {include file='addclass.html'}
+                {include file='showaddclass.html'}
                 {/if}
             </div>
         </div>

@@ -4,12 +4,11 @@
     
     switch ($op) {
         //test
-        // 改
 		case 'login':
 			header("location:user.php?op=login");
 			exit;
 			break;
-            //改
+
 		default :
 			break;
 	}
