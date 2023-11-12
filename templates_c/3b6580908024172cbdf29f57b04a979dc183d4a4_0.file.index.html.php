@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2023-11-12 16:06:23
+/* Smarty version 3.1.34-dev-7, created on 2023-11-12 18:22:28
   from 'D:\lesson\select_lesson\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6550f7ff466627_41380325',
+  'unifunc' => 'content_655117e4c55836_46149240',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3b6580908024172cbdf29f57b04a979dc183d4a4' => 
     array (
       0 => 'D:\\lesson\\select_lesson\\templates\\index.html',
-      1 => 1699803926,
+      1 => 1699813346,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:showaddclass.html' => 1,
   ),
 ),false)) {
-function content_6550f7ff466627_41380325 (Smarty_Internal_Template $_smarty_tpl) {
+function content_655117e4c55836_46149240 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 
 <head>
@@ -60,50 +60,52 @@ function content_6550f7ff466627_41380325 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 
 <div class='container'>
-    <div class="col-md-16" id="shop_head">
-        <a href="index.php?op=home">
-            <img alt="logo" height="200" src="templates/web_image/home/lemon.png" width="200">
-        </a>
-        <a class="home-link" href="index.php?op=home">
-            <img alt="home" src="templates/web_image/home/home.png" width="80">
-            <span class="home-text">首頁</span>
-        </a>
-        <a class="home-link" href="index.php?op=home">
-            <img alt="home" src="templates/web_image/home/home.png" width="80">
-            <span class="home-text">檢視課表</span>
-        </a>
-        <a class="home-link" href="index.php?op=home">
-            <img alt="home" src="templates/web_image/home/home.png" width="80">
-            <span class="home-text">查詢課程</span>
-        </a>
-        <a class="home-link" href="Addclass.php?op=addclass">
-            <img alt="home" src="templates/web_image/home/home.png" width="80">
-            <span class="home-text">加選課程</span>
-        </a>
+<!--    <div class="col-md-16" id="shop_head">-->
+<!--        <a href="index.php?op=home">-->
+<!--            <img alt="logo" height="200" src="templates/web_image/home/lemon.png" width="200">-->
+<!--        </a>-->
+<!--        <a class="home-link" href="index.php?op=home">-->
+<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
+<!--            <span class="home-text">首頁</span>-->
+<!--        </a>-->
+<!--        <a class="home-link" href="index.php?op=home">-->
+<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
+<!--            <span class="home-text">檢視課表</span>-->
+<!--        </a>-->
+<!--        <a class="home-link" href="index.php?op=home">-->
+<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
+<!--            <span class="home-text">查詢課程</span>-->
+<!--        </a>-->
+<!--        <a class="home-link" href="Addclass.php?op=addclass">-->
+<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
+<!--            <span class="home-text">加選課程</span>-->
+<!--        </a>-->
 
-        <div class="col-md-3 col-sm-4" id="login_frame">
-            <?php if ($_smarty_tpl->tpl_vars['op']->value != "login" && $_smarty_tpl->tpl_vars['op']->value != "registered" && $_smarty_tpl->tpl_vars['op']->value != "loginout") {?>
-            <?php $_smarty_tpl->_subTemplateRender('file:index_side.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-            <?php }?>
-        </div>
+<!--        <div class="col-md-3 col-sm-4" id="login_frame">-->
+<!--            <?php if ($_smarty_tpl->tpl_vars['op']->value != "login" && $_smarty_tpl->tpl_vars['op']->value != "registered" && $_smarty_tpl->tpl_vars['op']->value != "loginout") {?>-->
+<!--            <?php $_smarty_tpl->_subTemplateRender('file:index_side.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>-->
+<!--            <?php }?>-->
+<!--        </div>-->
         <div class="row" id="shop_main">
             <div class="col-md-9 col-sm-8" id="show_shop">
                 <?php if ($_smarty_tpl->tpl_vars['op']->value == "home") {?>
-                <h1>選課系統</h1>
+                    <h1>選課系統</h1>
                 <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "login" || $_smarty_tpl->tpl_vars['op']->value == "loginout") {?>
                 <div style="max-width: 500px;margin: auto;">
                     <?php $_smarty_tpl->_subTemplateRender('file:login.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
                 </div>
                 <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "addclass") {?>
-                <?php $_smarty_tpl->_subTemplateRender('file:addclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+                    <?php $_smarty_tpl->_subTemplateRender('file:addclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
                 <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "search_result") {?>
-                <?php $_smarty_tpl->_subTemplateRender('file:addclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+                    <?php $_smarty_tpl->_subTemplateRender('file:addclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
-                <?php $_smarty_tpl->_subTemplateRender('file:showaddclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+                    <?php $_smarty_tpl->_subTemplateRender('file:showaddclass.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+                <?php } else { ?>
+                    <h1>選課系統</h1>
                 <?php }?>
             </div>
         </div>

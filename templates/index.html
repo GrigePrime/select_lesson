@@ -58,9 +58,11 @@
                 </div>
                 {else if $op=="addclass"}
                 {include file='addclass.html'}
-                {else if $op=="search_result"}
+                {else if $op=="search_result" }
                 {include file='addclass.html'}
                 {include file='showaddclass.html'}
+                {else}
+                <h1>選課系統</h1>
                 {/if}
             </div>
         </div>
