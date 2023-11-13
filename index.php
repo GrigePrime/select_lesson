@@ -9,7 +9,6 @@
 			exit;
 			break;
             //改
-            //test
 		default :
 			break;
 	}
