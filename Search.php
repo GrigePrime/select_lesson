@@ -14,11 +14,11 @@
         $user_id = $_SESSION['user_id'];
         if($class_id!=''){
             $sql = "SELECT * FROM `course_data` WHERE `course_id` LIKE '%{$class_id}%' ORDER BY `course_id` ASC";
-            $result=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
+            $course=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
             if (mysqli_num_rows($result) != 0) {
                 $sql = "SELECT `ccm_course` FROM `ccm` WHERE `ccm_id` = '{$user_id}'";
                 $i = 0;
-                while ($class = $result->fetch_assoc()) {
+                while ($class = $course->fetch_assoc()) {
                     $all_class[$i] = $class;
                     $all_class[$i]['course_time'] = checktime($class['course_time1'],$class['course_time2'],$class['course_time3']);
                     $all_class[$i]['course_room'] = checkroom($class['course_room1'],$class['course_room2'],$class['course_room3']);
