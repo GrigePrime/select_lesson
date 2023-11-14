@@ -18,6 +18,8 @@
             if (mysqli_num_rows($course) != 0) {
                 //$sql = "SELECT `ccm_course` FROM `ccm` WHERE `ccm_id` = '{$user_id}'";
                 $i = 0;
+//                 $class = $course->fetch_assoc();
+//                 echo  $class['course_name'];
                 while ($class = $course->fetch_assoc()) {
                     $all_class[$i] = $class;
                     $all_class[$i]['course_time'] = checktime($class['course_time1'],$class['course_time2'],$class['course_time3']);

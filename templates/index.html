@@ -22,32 +22,32 @@
 <body>
 
 <div class='container'>
-<!--    <div class="col-md-16" id="shop_head">-->
-<!--        <a href="index.php?op=home">-->
-<!--            <img alt="logo" height="200" src="templates/web_image/home/lemon.png" width="200">-->
-<!--        </a>-->
-<!--        <a class="home-link" href="index.php?op=home">-->
-<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
-<!--            <span class="home-text">首頁</span>-->
-<!--        </a>-->
-<!--        <a class="home-link" href="index.php?op=home">-->
-<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
-<!--            <span class="home-text">檢視課表</span>-->
-<!--        </a>-->
-<!--        <a class="home-link" href="Search.php?op=search">-->
-<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
-<!--            <span class="home-text">查詢課程</span>-->
-<!--        </a>-->
-<!--        <a class="home-link" href="index.php?op=home">-->
-<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
-<!--            <span class="home-text">加選課程</span>-->
-<!--        </a>-->
+    <div class="col-md-16" id="shop_head">
+        <a href="index.php?op=home">
+            <img alt="logo" height="200" src="templates/web_image/home/lemon.png" width="200">
+        </a>
+        <a class="home-link" href="index.php?op=home">
+            <img alt="home" src="templates/web_image/home/home.png" width="80">
+            <span class="home-text">首頁</span>
+        </a>
+        <a class="home-link" href="index.php?op=home">
+            <img alt="home" src="templates/web_image/home/home.png" width="80">
+            <span class="home-text">檢視課表</span>
+        </a>
+        <a class="home-link" href="Search.php?op=search">
+            <img alt="home" src="templates/web_image/home/home.png" width="80">
+            <span class="home-text">查詢課程</span>
+        </a>
+        <a class="home-link" href="index.php?op=home">
+            <img alt="home" src="templates/web_image/home/home.png" width="80">
+            <span class="home-text">加選課程</span>
+        </a>
 
-<!--        <div class="col-md-3 col-sm-4" id="login_frame">-->
-<!--            {if $op!="login"&&$op!="registered"&&$op!="registered_insert"&&$op!="loginout"}-->
-<!--            {include file='index_side.html'}-->
-<!--            {/if}-->
-<!--        </div>-->
+        <div class="col-md-3 col-sm-4" id="login_frame">
+            {if $op!="login"&&$op!="registered"&&$op!="registered_insert"&&$op!="loginout"}
+            {include file='index_side.html'}
+            {/if}
+        </div>
         <div class="row" id="shop_main">
             <div class="col-md-9 col-sm-8" id="show_shop">
                 {if $op=="home"}
@@ -58,6 +58,9 @@
                 </div>
                 {else if $op=="search"}
                 {include file='search.html'}
+                {else if $op=="search_result"}
+                {include file='search.html'}
+                {include file='show_class.html'}
                 {/if}
             </div>
         </div>
