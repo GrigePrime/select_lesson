@@ -11,12 +11,12 @@
     function show_class(){
         global $smarty, $mysqli,$class_id,$op,$msg,$all_class;
         $op = 'search';
-        $user_id = $_SESSION['user_id'];
+        //$user_id = $_SESSION['user_id'];
         if($class_id!=''){
             $sql = "SELECT * FROM `course_data` WHERE `course_id` LIKE '%{$class_id}%' ORDER BY `course_id` ASC";
             $course=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
-            if (mysqli_num_rows($result) != 0) {
-                $sql = "SELECT `ccm_course` FROM `ccm` WHERE `ccm_id` = '{$user_id}'";
+            if (mysqli_num_rows($course) != 0) {
+                //$sql = "SELECT `ccm_course` FROM `ccm` WHERE `ccm_id` = '{$user_id}'";
                 $i = 0;
                 while ($class = $course->fetch_assoc()) {
                     $all_class[$i] = $class;

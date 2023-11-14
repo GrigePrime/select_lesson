@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2023-11-13 16:46:50
+/* Smarty version 3.1.34-dev-7, created on 2023-11-14 16:11:16
   from 'C:\Users\ASUS\WebstormProjects\select_lesson\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_655252fa880e94_71384256',
+  'unifunc' => 'content_65539c24a09aa2_51195308',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2d83c55749b4c60a0351fc29bc73a6fd08752c29' => 
     array (
       0 => 'C:\\Users\\ASUS\\WebstormProjects\\select_lesson\\templates\\index.html',
-      1 => 1699894010,
+      1 => 1699978247,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:search.html' => 1,
   ),
 ),false)) {
-function content_655252fa880e94_71384256 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65539c24a09aa2_51195308 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 
 <head>
@@ -58,7 +58,7 @@ function content_655252fa880e94_71384256 (Smarty_Internal_Template $_smarty_tpl)
 
 <body>
 
-<div class='container'>
+<!--<div class='container'>-->
 <!--    <div class="col-md-16" id="shop_head">-->
 <!--        <a href="index.php?op=home">-->
 <!--            <img alt="logo" height="200" src="templates/web_image/home/lemon.png" width="200">-->
