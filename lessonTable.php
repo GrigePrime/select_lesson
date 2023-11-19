@@ -61,7 +61,7 @@
                 //init ccm
                 if($init_flag == 0){
                     for($col_t = 1;$col_t<8;$col_t++){
-                        for($row_t = 1;$row_t<11;$row_t++){
+                        for($row_t = 1;$row_t<15;$row_t++){
                             if(empty($ccm_set[$col_t][$row_t]['course_name'])){
                                 $ccm_set[$col_t][$row_t]['course_name'] = ' ';
                             }

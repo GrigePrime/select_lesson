@@ -87,11 +87,11 @@ body {
     /max-height: 100%;*/
 }
 
+/*改*/
 #Ltable {
     float: left;
-    width: 40%;
-    /*width: 800px;*/
-
+    width: 50%;
+    /*width: 900px;*/
 }
 
 .listt {
@@ -101,3 +101,5 @@ body {
     padding-left: 50px;
 
 }
+
+/*改*/

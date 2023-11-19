@@ -35,6 +35,7 @@
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">檢視課表</span>
         </a>
+        <!改>
         <a class="home-link" href="index.php?op=home">
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">查詢課程</span>
@@ -43,6 +44,7 @@
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">加選課程</span>
         </a>
+        <!改>
         <a class="home-link" href="lessonCancel.php?op=lessonCancel">
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">退選課程</span>
@@ -67,10 +69,10 @@
                 <!改>
                 {else if $op=="lessonTable"}
                 {include file='lessonTable.html'}
-                <!改>
                 {else if $op=="lessonCancel"}
                 {include file='lessonCancel.html'}
                 {/if}
+                <!改>
             </div>
         </div>
     </div>
