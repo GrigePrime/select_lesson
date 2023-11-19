@@ -30,7 +30,8 @@
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">首頁</span>
         </a>
-        <a class="home-link" href="index.php?op=home">
+        <!改>
+        <a class="home-link" href="lessonTable.php?op=lessontable">
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">檢視課表</span>
         </a>
@@ -42,7 +43,11 @@
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">加選課程</span>
         </a>
-
+        <a class="home-link" href="lessonCancel.php?op=lessonCancel">
+            <img alt="home" src="templates/web_image/home/home.png" width="80">
+            <span class="home-text">退選課程</span>
+        </a>
+        <!改>
         <div class="col-md-3 col-sm-4" id="login_frame">
             {if $op!="login"&&$op!="registered"&&$op!="registered_insert"&&$op!="loginout"}
             {include file='index_side.html'}
@@ -50,18 +55,27 @@
         </div>
         <div class="row" id="shop_main">
             <div class="col-md-9 col-sm-8" id="show_shop">
+                {if isset($msg)}
+                <b class="text-danger">●{$msg}</b>
+                {/if}
                 {if $op=="home"}
                 <h1>選課系統</h1>
                 {else if $op=="login"||$op=="loginout"}
                 <div style="max-width: 500px;margin: auto;">
                     {include file='login.html'}
                 </div>
+                <!改>
+                {else if $op=="lessonTable"}
+                {include file='lessonTable.html'}
+                <!改>
+                {else if $op=="lessonCancel"}
+                {include file='lessonCancel.html'}
                 {/if}
             </div>
         </div>
     </div>
 </div>
-</div>
+
 </body>
 
 </html>
