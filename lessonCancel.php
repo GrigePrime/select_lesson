@@ -1,5 +1,5 @@
 <?php
-require_once('header.php');
+    require_once('header.php');
     $op = isset($_REQUEST['op']) ? filter_var($_REQUEST['op'],FILTER_SANITIZE_SPECIAL_CHARS) : 'home';
     $user_id = isset($_REQUEST['user_id']) ? filter_var($_REQUEST['user_id'],FILTER_SANITIZE_SPECIAL_CHARS) : '';
     $chose_cancel_id = isset($_REQUEST['chose_cancel_id']) ? filter_var($_REQUEST['chose_cancel_id'],FILTER_SANITIZE_SPECIAL_CHARS) : '';
@@ -7,7 +7,6 @@ require_once('header.php');
         $msg = '請先登入';
     }else{
         show_course_selected();
-//         check_cancel_class($chose_cancel_id);
         if($chose_cancel_id != ''){
             check_cancel_class($chose_cancel_id);
         }
@@ -17,6 +16,11 @@ require_once('header.php');
 
     function show_course_selected(){
             global $smarty, $mysqli,$op,$user_id, $msg;
+
+//             if($isuser==false){
+//                 $msg = '請先登入';
+//                 return;
+//             }
             $op = 'lessonCancel';
             $user_id = $_SESSION['user_id'];
             $sql = "SELECT * FROM `ccm` WHERE `ccm_id` LIKE '%{$user_id}%'";

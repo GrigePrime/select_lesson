@@ -69,7 +69,8 @@
                 <!改>
                 {else if $op=="lessonTable"}
                 {include file='lessonTable.html'}
-                {else if $op=="lessonCancel"}
+                <!改>
+                {else if $op=="lessonCancel" && $isuser !=false}
                 {include file='lessonCancel.html'}
                 {/if}
                 <!改>
