@@ -4,6 +4,11 @@
     $class_id = isset($_REQUEST['class_id']) ? filter_var($_REQUEST['class_id'],FILTER_SANITIZE_SPECIAL_CHARS) : '';
     $chose_id = isset($_REQUEST['chose_id']) ? filter_var($_REQUEST['chose_id'],FILTER_SANITIZE_SPECIAL_CHARS) : '';
     $all_class = isset($all_class)?$all_class:array();
+//     switch($op){
+//         default:
+//             show_all_class();
+//             break;
+//     }
     show_all_class();
     if($chose_id!=''){
         checkaddclass($chose_id);
@@ -26,7 +31,6 @@
                 $sql = "SELECT `ccm_course` FROM `ccm` WHERE `ccm_id` = '{$user_id}'";
                 $alreadyclass =$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到用戶課表". $mysqli->error);
                 $alreadyclass_data = $alreadyclass->fetch_assoc();
-                echo $alreadyclass_data['ccm_course'];
                 $alreadyclass_list = explode(",", $alreadyclass_data['ccm_course']);
                 $i = 0;
                 while ($class = $result->fetch_assoc()) {
@@ -45,6 +49,7 @@
                                     break;
                                 }
                             }
+
                             $i++;
                         }
                 $smarty->assign('all_class',$all_class);
@@ -78,7 +83,7 @@
         $chose_class_credit = $chose_class_credit_data['course_credit'];
         if($user_new_credit+$chose_class_credit>$user_rules_max_credit){
             $msgdanger = '超過規定學分';
-            $smarty->assign('msgdanger',$msgdanger);
+             $smarty->assign('msgdanger',$msgdanger);
             return;
         }else{
             $sql = "SELECT `ccm_course` FROM `ccm` WHERE `ccm_id` = '{$user_id}'";

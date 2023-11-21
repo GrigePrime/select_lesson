@@ -1,5 +1,5 @@
 <?php
-    define("_name","81 線上商店");
+    define("_name","honey lemon select lesson");
 	define("_DB_HOST","localhost");
 	define("_DB_ID","root");
 	define("_DB_PW","");
