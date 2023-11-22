@@ -4,25 +4,21 @@
     $class_id = isset($_REQUEST['class_id']) ? filter_var($_REQUEST['class_id'],FILTER_SANITIZE_SPECIAL_CHARS) : '';
     $chose_id = isset($_REQUEST['chose_id']) ? filter_var($_REQUEST['chose_id'],FILTER_SANITIZE_SPECIAL_CHARS) : '';
     $all_class = isset($all_class)?$all_class:array();
-//     switch($op){
-//         default:
-//             show_all_class();
-//             break;
-//     }
-    show_all_class();
-    if($chose_id!=''){
-        checkaddclass($chose_id);
+    if($isuser==false){
+        $msg = '請先登入';
+    }else{
+        show_all_class();
+        if($chose_id!=''){
+            checkaddclass($chose_id);
+        }
     }
+
     require("footer.php");
 
     function show_all_class(){
         global $smarty, $mysqli,$class_id,$op,$msg,$isuser,$all_class;
         $alreadyclass_list = array();
         $op = 'addclass';
-        if($isuser==false){
-            $msg = '請先登入';
-            return;
-        }
         $user_id = $_SESSION['user_id'];
         if($class_id!=''){
             $sql = "SELECT * FROM `course_data` WHERE `course_id` LIKE '%{$class_id}%' ORDER BY `course_id` ASC";
@@ -106,8 +102,6 @@
             return;
 
         }
-
-
     }
 
     function checkroom($room1,$room2,$room3){

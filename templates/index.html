@@ -63,12 +63,12 @@
                 <div style="max-width: 500px;margin: auto;">
                     {include file='login.html'}
                 </div>
-                {else if $op=="addclass"}
+                {else if $op=="addclass"&&$isuser!=false}
                 {include file='addclass.html'}
-                {else if $op=="search_result" || $op=="chose_class"}
+                {else if $op=="search_result" || $op=="chose_class"&&$isuser!=false}
                 {include file='addclass.html'}
                 {include file='showaddclass.html'}
-                {else if $op=="lessonTable"}
+                {else if $op=="lessonTable"&&$isuser!=false}
                 {include file='lessonTable.html'}
                 {else if $op=="lessonCancel"&&$isuser!=false}
                 {include file='lessonCancel.html'}
