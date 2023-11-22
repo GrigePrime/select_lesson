@@ -109,13 +109,21 @@
 
                 $sql = "UPDATE `ccm` SET `ccm_credit` = `ccm_credit`-{$chose_class_credit} WHERE `ccm_id` = '{$user_id}'";
                 $mysqli->query($sql) or die("在查詢資料庫時發生錯誤,更新用戶學分". $mysqli->error);
+                $sql = "SELECT `course_quotaPick` FROM `course_data` WHERE `course_id` = '{$chose_cancel_id}'";
+                $already_pick_person = $mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到課程已選人數". $mysqli->error);
+                $already_pick_person_data = $already_pick_person->fetch_assoc();
+                $already_pick_person = $already_pick_person_data['course_quotaPick'];
+                echo $already_pick_person;
+                $already_pick_person = $already_pick_person-1;
+                $sql = "UPDATE `course_data` SET `course_quotaPick` = '{$already_pick_person}' WHERE `course_id` = '{$chose_cancel_id}'";
+                $mysqli->query($sql) or die("在查詢資料庫時發生錯誤,更新課程已選人數". $mysqli->error);
                 $sql = "UPDATE `ccm` SET `ccm_course` = '{$new_list}' WHERE `ccm_id` = '{$user_id}'";
                 $mysqli->query($sql) or die("在查詢資料庫時發生錯誤,更新用戶課表". $mysqli->error);
 
-                $sql = "SELECT `ccm_credit` FROM `ccm` WHERE `ccm_id` = '{$user_id}'";
-                $user_credit_n =$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到用戶資料". $mysqli->error);
-                $user_credit_data_n = $user_credit_n->fetch_assoc();
-                $user_old_credit_n = $user_credit_data_n['ccm_credit'];
+//                 $sql = "SELECT `ccm_credit` FROM `ccm` WHERE `ccm_id` = '{$user_id}'";
+//                 $user_credit_n =$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到用戶資料". $mysqli->error);
+//                 $user_credit_data_n = $user_credit_n->fetch_assoc();
+//                 $user_old_credit_n = $user_credit_data_n['ccm_credit'];
 //                 echo nl2br("\n");
 //                 echo $user_old_credit_n;
 
