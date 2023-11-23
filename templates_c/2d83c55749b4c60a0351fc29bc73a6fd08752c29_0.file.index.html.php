@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2023-11-23 11:22:46
+/* Smarty version 3.1.34-dev-7, created on 2023-11-23 16:07:35
   from 'C:\Users\ASUS\WebstormProjects\select_lesson\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_655f36065968b6_27528899',
+  'unifunc' => 'content_655f78c78fb835_26783264',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2d83c55749b4c60a0351fc29bc73a6fd08752c29' => 
     array (
       0 => 'C:\\Users\\ASUS\\WebstormProjects\\select_lesson\\templates\\index.html',
-      1 => 1700738563,
+      1 => 1700755654,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:index_side.html' => 1,
     'file:login.html' => 1,
-    'file:search.html' => 3,
-    'file:show_class.html' => 1,
-    'file:show_classname.html' => 1,
+    'file:search.html' => 4,
+    'file:show_class.html' => 3,
   ),
 ),false)) {
-function content_655f36065968b6_27528899 (Smarty_Internal_Template $_smarty_tpl) {
+function content_655f78c78fb835_26783264 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 
 <head>
@@ -61,33 +60,33 @@ function content_655f36065968b6_27528899 (Smarty_Internal_Template $_smarty_tpl)
 <body>
 
 <div class='container'>
-    <div class="col-md-16" id="shop_head">
-        <a href="index.php?op=home">
-            <img alt="logo" height="200" src="templates/web_image/home/lemon.png" width="200">
-        </a>
-        <a class="home-link" href="index.php?op=home">
-            <img alt="home" src="templates/web_image/home/home.png" width="80">
-            <span class="home-text">首頁</span>
-        </a>
-        <a class="home-link" href="index.php?op=home">
-            <img alt="home" src="templates/web_image/home/home.png" width="80">
-            <span class="home-text">檢視課表</span>
-        </a>
+<!--    <div class="col-md-16" id="shop_head">-->
+<!--        <a href="index.php?op=home">-->
+<!--            <img alt="logo" height="200" src="templates/web_image/home/lemon.png" width="200">-->
+<!--        </a>-->
+<!--        <a class="home-link" href="index.php?op=home">-->
+<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
+<!--            <span class="home-text">首頁</span>-->
+<!--        </a>-->
+<!--        <a class="home-link" href="index.php?op=home">-->
+<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
+<!--            <span class="home-text">檢視課表</span>-->
+<!--        </a>-->
         <a class="home-link" href="Search.php?op=search">
             <img alt="home" src="templates/web_image/home/home.png" width="80">
             <span class="home-text">查詢課程</span>
         </a>
-        <a class="home-link" href="index.php?op=home">
-            <img alt="home" src="templates/web_image/home/home.png" width="80">
-            <span class="home-text">加選課程</span>
-        </a>
+<!--        <a class="home-link" href="index.php?op=home">-->
+<!--            <img alt="home" src="templates/web_image/home/home.png" width="80">-->
+<!--            <span class="home-text">加選課程</span>-->
+<!--        </a>-->
 
-        <div class="col-md-3 col-sm-4" id="login_frame">
-            <?php if ($_smarty_tpl->tpl_vars['op']->value != "login" && $_smarty_tpl->tpl_vars['op']->value != "registered" && $_smarty_tpl->tpl_vars['op']->value != "registered_insert" && $_smarty_tpl->tpl_vars['op']->value != "loginout") {?>
-            <?php $_smarty_tpl->_subTemplateRender('file:index_side.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-            <?php }?>
-        </div>
+<!--        <div class="col-md-3 col-sm-4" id="login_frame">-->
+<!--            <?php if ($_smarty_tpl->tpl_vars['op']->value != "login" && $_smarty_tpl->tpl_vars['op']->value != "registered" && $_smarty_tpl->tpl_vars['op']->value != "registered_insert" && $_smarty_tpl->tpl_vars['op']->value != "loginout") {?>-->
+<!--            <?php $_smarty_tpl->_subTemplateRender('file:index_side.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>-->
+<!--            <?php }?>-->
+<!--        </div>-->
         <div class="row" id="shop_main">
             <div class="col-md-9 col-sm-8" id="show_shop">
                 <?php if ($_smarty_tpl->tpl_vars['op']->value == "home") {?>
@@ -108,7 +107,12 @@ function content_655f36065968b6_27528899 (Smarty_Internal_Template $_smarty_tpl)
                 <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "search_class_result") {?>
                 <?php $_smarty_tpl->_subTemplateRender('file:search.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
-                <?php $_smarty_tpl->_subTemplateRender('file:show_classname.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+                <?php $_smarty_tpl->_subTemplateRender('file:show_class.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>
+                <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "search_class_teacher") {?>
+                <?php $_smarty_tpl->_subTemplateRender('file:search.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>
+                <?php $_smarty_tpl->_subTemplateRender('file:show_class.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
                 <?php }?>
             </div>

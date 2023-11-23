@@ -1,4 +1,5 @@
 <?php
+    //不需要
     require_once('header.php');
     $op = isset($_REQUEST['op']) ? filter_var($_REQUEST['op'],FILTER_SANITIZE_SPECIAL_CHARS) : 'home';
     //$class_id = isset($_REQUEST['class_id']) ? filter_var($_REQUEST['class_id'],FILTER_SANITIZE_SPECIAL_CHARS) : '';
@@ -22,8 +23,6 @@
                    if (mysqli_num_rows($course_name) != 0) {
                       //$sql = "SELECT `ccm_course` FROM `ccm` WHERE `ccm_id` = '{$user_id}'";
                         $i = 0;
-
-
                         while ($class = $course_name->fetch_assoc()) {
                             $all_class[$i] = $class;
                             $all_class[$i]['course_time'] = checktime($class['course_time1'],$class['course_time2'],$class['course_time3']);

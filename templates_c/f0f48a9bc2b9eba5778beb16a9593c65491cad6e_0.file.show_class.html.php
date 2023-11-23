@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2023-11-22 05:33:51
+/* Smarty version 3.1.34-dev-7, created on 2023-11-23 15:09:52
   from 'C:\Users\ASUS\WebstormProjects\select_lesson\templates\show_class.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_655d92bfcc4b72_70940878',
+  'unifunc' => 'content_655f6b4091c533_53692324',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f0f48a9bc2b9eba5778beb16a9593c65491cad6e' => 
     array (
       0 => 'C:\\Users\\ASUS\\WebstormProjects\\select_lesson\\templates\\show_class.html',
-      1 => 1700631227,
+      1 => 1700751866,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_655d92bfcc4b72_70940878 (Smarty_Internal_Template $_smarty_tpl) {
+function content_655f6b4091c533_53692324 (Smarty_Internal_Template $_smarty_tpl) {
 ?><table class="table">
     <thead>
     <tr>
@@ -60,13 +60,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['class']->value) {
 </td>
         <td><?php echo $_smarty_tpl->tpl_vars['class']->value['course_people'];?>
 </td>
-        <form action="Search.php" class="form-inline" method="get">
+<!--        <form action="Search.php" class="form-inline" method="get">-->
 <!--            <input id="chose_class" name="op" type="hidden" value="chose_class">-->
-            <input class="form-control" id="class_id" name="class_id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['class_id']->value;?>
-">
+<!--            <input class="form-control" id="class_id" name="class_id" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['class_id']->value;?>
+">-->
 <!--            <input class="form-control" id="class_name" name="class_name" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['class_name']->value;?>
 ">-->
-        </form>
+<!--        </form>-->
     </tr>
     </tbody>
     <?php

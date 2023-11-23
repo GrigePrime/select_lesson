@@ -3,14 +3,18 @@
     <input id="search" name="op" type="hidden" value="search">
     <input class="form-control" id="class_id" name="class_id" placeholder="請輸入課程代號" style="margin-top: 5px; margin-bottom: 3px;"
            type="text">
-    <button id="searchIDbutton" style="width: 30px;height: 30px;" type="submit">
-        <img alt="search" src="templates/web_image/search.png" width="20px">
-    </button>
-<!--    <input class="form-control" id="class_name" name="class_name" placeholder="請輸入課程名稱" style="margin-top: 5px; margin-bottom: 3px;"-->
-<!--           type="text">-->
-<!--    <button id="searchbutton" style="width: 30px;height: 30px;" type="submit">-->
+<!--    <button id="searchIDbutton" style="width: 30px;height: 30px;" type="submit">-->
 <!--        <img alt="search" src="templates/web_image/search.png" width="20px">-->
 <!--    </button>-->
+    </br>
+    <input class="form-control" id="class_name" name="class_name" placeholder="請輸入課程名稱" style="margin-top: 5px; margin-bottom: 3px;"
+           type="text">
+    </br>
+    <input class="form-control" id="class_teacher" name="class_teacher" placeholder="請輸入課程教授" style="margin-top: 5px; margin-bottom: 3px;"
+           type="text">
+    <button id="searchbutton" style="width: 30px;height: 30px;" type="submit">
+        <img alt="search" src="templates/web_image/search.png" width="20px">
+    </button>
     {if isset($msgdanger)}
     <br>
     <b class="text-danger">●{$msgdanger}</b>
