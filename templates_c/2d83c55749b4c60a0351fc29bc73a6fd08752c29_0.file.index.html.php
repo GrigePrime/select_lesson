@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2023-11-14 18:20:27
+/* Smarty version 3.1.34-dev-7, created on 2023-11-23 11:22:46
   from 'C:\Users\ASUS\WebstormProjects\select_lesson\templates\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6553ba6b419225_42312791',
+  'unifunc' => 'content_655f36065968b6_27528899',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2d83c55749b4c60a0351fc29bc73a6fd08752c29' => 
     array (
       0 => 'C:\\Users\\ASUS\\WebstormProjects\\select_lesson\\templates\\index.html',
-      1 => 1699986019,
+      1 => 1700738563,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
     'file:index_side.html' => 1,
     'file:login.html' => 1,
-    'file:search.html' => 2,
+    'file:search.html' => 3,
     'file:show_class.html' => 1,
+    'file:show_classname.html' => 1,
   ),
 ),false)) {
-function content_6553ba6b419225_42312791 (Smarty_Internal_Template $_smarty_tpl) {
+function content_655f36065968b6_27528899 (Smarty_Internal_Template $_smarty_tpl) {
 ?><html>
 
 <head>
@@ -103,6 +104,11 @@ function content_6553ba6b419225_42312791 (Smarty_Internal_Template $_smarty_tpl)
                 <?php $_smarty_tpl->_subTemplateRender('file:search.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
                 <?php $_smarty_tpl->_subTemplateRender('file:show_class.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+                <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "search_class_result") {?>
+                <?php $_smarty_tpl->_subTemplateRender('file:search.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>
+                <?php $_smarty_tpl->_subTemplateRender('file:show_classname.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
                 <?php }?>
             </div>
