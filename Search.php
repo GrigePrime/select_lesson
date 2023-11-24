@@ -5,8 +5,11 @@
     $class_name = isset($_REQUEST['class_name']) ? filter_var($_REQUEST['class_name'],FILTER_SANITIZE_SPECIAL_CHARS) : '';
     $class_teacher = isset($_REQUEST['class_teacher']) ? filter_var($_REQUEST['class_teacher'],FILTER_SANITIZE_SPECIAL_CHARS) : '';
     $all_class = isset($all_class)?$all_class:array();
-
-    show_class();
+    if($isuser==false){
+        $msg = '請先登入';
+    }else{
+        show_class();
+    }
     require("footer.php");
 
     function show_class(){

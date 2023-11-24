@@ -49,7 +49,7 @@
                             $i++;
                         }
                 $smarty->assign('all_class',$all_class);
-                $op='search_result';
+                $op='search_add_result';
             }else{
                 $msg = '查無資料';
             }
