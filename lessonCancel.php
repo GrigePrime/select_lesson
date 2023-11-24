@@ -90,6 +90,7 @@
                 $msgdanger = '不可以退選必修!';
                 $smarty->assign('msgdanger',$msgdanger);
                 return;
+                //改
             }else if($user_old_credit - $chose_class_credit < $user_rules_min_credit){
                 $msgdanger = '低於規定學分';
                 $smarty->assign('msgdanger',$msgdanger);
