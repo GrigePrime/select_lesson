@@ -40,6 +40,7 @@
                         $ccm_course_forCancel[$i]['course_credit'] = $course_d_f['course_credit'];
                         $ccm_course_forCancel[$i]['course_RE'] = $course_d_f['course_RE'];
                         $ccm_course_forCancel[$i]['course_id'] = $course_d_f['course_id'];
+
                     }
                 }
                 $smarty->assign('ccm_course_forCancel',$ccm_course_forCancel);
