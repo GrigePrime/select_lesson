@@ -65,13 +65,18 @@
                 </div>
                 {else if $op=="addclass"&&$isuser!=false}
                 {include file='addclass.html'}
-                {else if $op=="search_result" || $op=="chose_class"&&$isuser!=false}
+                {else if $op=="search_add_result" || $op=="chose_class"&&$isuser!=false}
                 {include file='addclass.html'}
                 {include file='showaddclass.html'}
                 {else if $op=="lessonTable"&&$isuser!=false}
                 {include file='lessonTable.html'}
                 {else if $op=="lessonCancel"&&$isuser!=false}
                 {include file='lessonCancel.html'}
+                {else if $op=="search"}
+                {include file='search.html'}
+                {else if $op=="search_result"||$op=="search_class_result"||$op=="search_class_teacher"}
+                {include file='search.html'}
+                {include file='show_class.html'}
                 {else}
                 <h1>選課系統吧</h1>
                 {/if}

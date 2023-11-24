@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2023-11-22 07:00:02
+/* Smarty version 3.1.34-dev-7, created on 2023-11-24 15:13:57
   from 'D:\lesson\templates\lessonCancel.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_655da6f236ae93_64098270',
+  'unifunc' => 'content_6560bdb5959375_19352857',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '656d8a8284843cc3c3ed9849bc35affb929c6e0c' => 
     array (
       0 => 'D:\\lesson\\templates\\lessonCancel.html',
-      1 => 1700636397,
+      1 => 1700838359,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_655da6f236ae93_64098270 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6560bdb5959375_19352857 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="listt">
     <table class="table">
         <thead>
         <h2>退選</h2>
         <tr>
             <th>課程名稱</th>
+            <th>選課代號</th>
             <th>學分</th>
             <th>必選修</th>
             <th>退選</th>
@@ -40,6 +41,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['ccm_c_f']->value) {
         <tbody>
         <tr>
             <td><?php echo $_smarty_tpl->tpl_vars['ccm_c_f']->value['course_name'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['ccm_c_f']->value['course_id'];?>
 </td>
             <td><?php echo $_smarty_tpl->tpl_vars['ccm_c_f']->value['course_credit'];?>
 </td>
