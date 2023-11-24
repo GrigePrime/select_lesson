@@ -64,20 +64,29 @@
         $chose_class_credit = $mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到課程學分". $mysqli->error);
         $chose_class_credit_data = $chose_class_credit->fetch_assoc();
         $chose_class_credit = $chose_class_credit_data['course_credit'];
+        //改
+        $sql = "SELECT `rules`.`rules_class` FROM `rules` JOIN `ccm` ON `rules`.`rules_depart` = `ccm`.`ccm_grade` WHERE `ccm`.`ccm_id` = '{$user_id}'";
+        $user_rules_class =$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到用戶規則". $mysqli->error);
+        $user_rules_class_data = $user_rules_class->fetch_assoc();
+        $user_rules_class = $user_rules_class_data['rules_class'];
+        $user_rules_class = explode(",",$user_rules_class);
+
+        $course_flag = false;
+
+        for($i = 0;$i<count($user_rules_class);$i++){
+            if($chose_cancel_id == $user_rules_class[$i]){
+                $course_flag = true;
+            }
+        }
+
         $sql = "SELECT `course_RE` FROM `course_data` WHERE `course_id` = '{$chose_cancel_id}'";
         $chose_class_RE = $mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到課程". $mysqli->error);
         $chose_class_RE_data= $chose_class_RE->fetch_assoc();
         $chose_class_RE = $chose_class_RE_data['course_RE'];
+
         //抓舊總學分，當前要退選的學分，規定最低學分
-//             echo $chose_class_RE;
-//             echo nl2br("\n");
-//             echo $user_old_credit;
-//             echo nl2br("\n");
-//             echo $chose_class_credit;
-//             echo nl2br("\n");
-//             echo $user_rules_min_credit;
-//             echo nl2br("\n");
-            if($chose_class_RE == '必修'){
+
+            if($course_flag == true){
                 $msgdanger = '不可以退選必修!';
                 $smarty->assign('msgdanger',$msgdanger);
                 return;
@@ -122,6 +131,7 @@
                 show_course_selected();
                 $msgsuccess = '退選成功';
                 $smarty->assign('msgsuccess',$msgsuccess);
+                $course_flag = false;
                 return;
             }
     }
