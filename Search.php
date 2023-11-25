@@ -13,71 +13,77 @@
     require("footer.php");
 
     function show_class(){
-        global $smarty, $mysqli,$class_id,$op,$msg,$all_class,$class_name,$class_teacher;
-        $op = 'search';
-        if($class_id!='' || $class_name != ''||$class_teacher!=''){
-            if($class_id!='' && $class_name == ''){
-                $sql = "SELECT * FROM `course_data` WHERE `course_id` LIKE '%{$class_id}%' ORDER BY `course_id` ASC";
-                $course=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
-                if (mysqli_num_rows($course) != 0) {
-                    $i = 0;
-                    while ($class = $course->fetch_assoc()) {
-                        $all_class[$i] = $class;
-                        $all_class[$i]['course_time'] = checktime($class['course_time1'],$class['course_time2'],$class['course_time3']);
-                        $all_class[$i]['course_room'] = checkroom($class['course_room1'],$class['course_room2'],$class['course_room3']);
-                        $all_class[$i]['course_people'] = $class['course_quotaPick'].'/'.$class['course_quota'];
-                        $i++;
+            global $smarty, $mysqli,$class_id,$op,$msg,$all_class,$class_name,$class_teacher;
+            $op = 'search';
+            if($class_id!='' || $class_name != ''||$class_teacher!=''){
+            //改
+                if($class_id!='' && $class_name == '' || $class_id!='' && $class_teacher == ''){
+            //改
+                    $sql = "SELECT * FROM `course_data` WHERE `course_id` LIKE '%{$class_id}%' ORDER BY `course_id` ASC";
+                    $course=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
+                    if (mysqli_num_rows($course) != 0) {
+                        $i = 0;
+                        while ($class = $course->fetch_assoc()) {
+                            $all_class[$i] = $class;
+                            $all_class[$i]['course_time'] = checktime($class['course_time1'],$class['course_time2'],$class['course_time3']);
+                            $all_class[$i]['course_room'] = checkroom($class['course_room1'],$class['course_room2'],$class['course_room3']);
+                            $all_class[$i]['course_people'] = $class['course_quotaPick'].'/'.$class['course_quota'];
+                            $i++;
+                        }
+                        $smarty->assign('all_class',$all_class);
+                        $op='search_result';
                     }
-                    $smarty->assign('all_class',$all_class);
-                    $op='search_result';
-                }
-                else{
-                    $msg = '查無資料';
-                }
-                $smarty->assign('class_id',$class_id);
-            }
-            else if($class_name != ''&& $class_id == ''){
-                $sql = "SELECT * FROM `course_data` WHERE `course_name` LIKE '%{$class_name}%' ";
-                $course_name=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
-                if (mysqli_num_rows($course_name) != 0) {
-                    $i = 0;
-                    while ($class = $course_name->fetch_assoc()) {
-                        $all_class[$i] = $class;
-                        $all_class[$i]['course_time'] = checktime($class['course_time1'],$class['course_time2'],$class['course_time3']);
-                        $all_class[$i]['course_room'] = checkroom($class['course_room1'],$class['course_room2'],$class['course_room3']);
-                        $all_class[$i]['course_people'] = $class['course_quotaPick'].'/'.$class['course_quota'];
-                        $i++;
+                    else{
+                        $msg = '查無資料';
                     }
-                    $smarty->assign('all_class',$all_class);
-                    $op='search_class_result';
+                    $smarty->assign('class_id',$class_id);
                 }
-                else{
-                    $msg = '查無資料';
-                }
-                $smarty->assign('class_name',$class_name);
-            }
-            else if($class_teacher != '' && $class_id == ''){
-                $sql = "SELECT * FROM `course_data` WHERE `course_teacher` LIKE '%{$class_teacher}%' ";
-                $course_teacher=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
-                if (mysqli_num_rows($course_teacher) != 0) {
-                    $i = 0;
-                    while ($class = $course_teacher->fetch_assoc()) {
-                        $all_class[$i] = $class;
-                        $all_class[$i]['course_time'] = checktime($class['course_time1'],$class['course_time2'],$class['course_time3']);
-                        $all_class[$i]['course_room'] = checkroom($class['course_room1'],$class['course_room2'],$class['course_room3']);
-                        $all_class[$i]['course_people'] = $class['course_quotaPick'].'/'.$class['course_quota'];
-                        $i++;
+                //改
+                else if($class_name != ''&& $class_id == '' || $class_name != ''&& $class_teacher == ''){
+                //改
+                    $sql = "SELECT * FROM `course_data` WHERE `course_name` LIKE '%{$class_name}%' ";
+                    $course_name=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
+                    if (mysqli_num_rows($course_name) != 0) {
+                        $i = 0;
+                        while ($class = $course_name->fetch_assoc()) {
+                            $all_class[$i] = $class;
+                            $all_class[$i]['course_time'] = checktime($class['course_time1'],$class['course_time2'],$class['course_time3']);
+                            $all_class[$i]['course_room'] = checkroom($class['course_room1'],$class['course_room2'],$class['course_room3']);
+                            $all_class[$i]['course_people'] = $class['course_quotaPick'].'/'.$class['course_quota'];
+                            $i++;
+                        }
+                        $smarty->assign('all_class',$all_class);
+                        $op='search_class_result';
                     }
-                    $smarty->assign('all_class',$all_class);
-                    $op='search_class_teacher';
+                    else{
+                        $msg = '查無資料';
+                    }
+                    $smarty->assign('class_name',$class_name);
                 }
-                else{
-                    $msg = '查無資料';
+                //改
+                else if($class_teacher != '' && $class_id == '' || $class_teacher != '' && $class_name == ''){
+                //改
+                    $sql = "SELECT * FROM `course_data` WHERE `course_teacher` LIKE '%{$class_teacher}%' ";
+                    $course_teacher=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
+                    if (mysqli_num_rows($course_teacher) != 0) {
+                        $i = 0;
+                        while ($class = $course_teacher->fetch_assoc()) {
+                            $all_class[$i] = $class;
+                            $all_class[$i]['course_time'] = checktime($class['course_time1'],$class['course_time2'],$class['course_time3']);
+                            $all_class[$i]['course_room'] = checkroom($class['course_room1'],$class['course_room2'],$class['course_room3']);
+                            $all_class[$i]['course_people'] = $class['course_quotaPick'].'/'.$class['course_quota'];
+                            $i++;
+                        }
+                        $smarty->assign('all_class',$all_class);
+                        $op='search_class_teacher';
+                    }
+                    else{
+                        $msg = '查無資料';
+                    }
+                    $smarty->assign('class_teacher',$class_teacher);
                 }
-                $smarty->assign('class_teacher',$class_teacher);
             }
         }
-    }
     function checkroom($room1,$room2,$room3){
         $room = '';
         if($room1!=''){
