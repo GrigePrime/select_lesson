@@ -13,7 +13,9 @@
         global $smarty, $mysqli,$class_id,$op,$msg,$all_class,$class_name,$class_teacher;
         $op = 'search';
         if($class_id!='' || $class_name != ''||$class_teacher!=''){
-            if($class_id!='' && $class_name == ''){
+        //改
+            if($class_id!='' && $class_name == '' || $class_id!='' && $class_teacher == ''){
+        //改
                 $sql = "SELECT * FROM `course_data` WHERE `course_id` LIKE '%{$class_id}%' ORDER BY `course_id` ASC";
                 $course=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
                 if (mysqli_num_rows($course) != 0) {
@@ -33,7 +35,9 @@
                 }
                 $smarty->assign('class_id',$class_id);
             }
-            else if($class_name != ''&& $class_id == ''){
+            //改
+            else if($class_name != ''&& $class_id == '' || $class_name != ''&& $class_teacher == ''){
+            //改
                 $sql = "SELECT * FROM `course_data` WHERE `course_name` LIKE '%{$class_name}%' ";
                 $course_name=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
                 if (mysqli_num_rows($course_name) != 0) {
@@ -53,7 +57,9 @@
                 }
                 $smarty->assign('class_name',$class_name);
             }
-            else if($class_teacher != '' && $class_id == ''){
+            //改
+            else if($class_teacher != '' && $class_id == '' || $class_teacher != '' && $class_name == ''){
+            //改
                 $sql = "SELECT * FROM `course_data` WHERE `course_teacher` LIKE '%{$class_teacher}%' ";
                 $course_teacher=$mysqli->query($sql) or die("在查詢資料庫時發生錯誤,找不到查詢課程". $mysqli->error);
                 if (mysqli_num_rows($course_teacher) != 0) {
