@@ -3,6 +3,7 @@
         <thead>
         <h2>退選</h2>
         <tr>
+            <th>選課代號</th>
             <th>課程名稱</th>
             <th>學分</th>
             <th>必選修</th>
@@ -12,6 +13,7 @@
         {foreach from=$ccm_course_forCancel item=ccm_c_f}
         <tbody>
         <tr>
+            <td>{$ccm_c_f.course_id}</td>
             <td>{$ccm_c_f.course_name}</td>
             <td>{$ccm_c_f.course_credit}</td>
             <td>{$ccm_c_f.course_RE}</td>
