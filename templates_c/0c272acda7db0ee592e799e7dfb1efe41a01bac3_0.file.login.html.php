@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2023-11-12 13:29:31
+/* Smarty version 3.1.34-dev-7, created on 2023-11-21 14:44:12
   from 'D:\lesson\select_lesson\templates\login.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_6550d33b153a71_72277920',
+  'unifunc' => 'content_655cc23c899d88_08373192',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6550d33b153a71_72277920 (Smarty_Internal_Template $_smarty_tpl) {
+function content_655cc23c899d88_08373192 (Smarty_Internal_Template $_smarty_tpl) {
 ?><h2>登入</h2>
 <br>
 <form action="user.php" class="form-horizontal" id="login_form" method="POST" role="form">
